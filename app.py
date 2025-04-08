@@ -210,5 +210,4 @@ Please revise the section accordingly. Integrate any new insights, merge related
             st.success("✅ BRD generated successfully!")
             st.download_button("🗕️ Download BRD (Word)", data=brd_file, file_name="Editable_BRD.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
             st.button("Finalize BRD")
- 
- 
+ st.sidebar.info("Powered by GenAI GETs 🚀")
