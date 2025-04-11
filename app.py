@@ -148,10 +148,10 @@ if tabs == "Design":
     st.title("📄 Design Document Generator")
 
 
-if tabs = "Testing":
+if tabs == "Testing":
     st.title("📄 Testing Document Generator")
 
-if tabs = "Analysis":
+if tabs == "Analysis":
     st.title("📄 Analysis Document Generator")
     
  
