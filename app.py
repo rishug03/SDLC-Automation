@@ -9,7 +9,7 @@ from brd import (
 )
 
 # === Initialize Groq client ===
-client = groq.Client(api_key="YOUR_GROQ_API_KEY")
+client = groq.Client(api_key="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")
 
 # === BRD Sections with Prompts ===
 brd_sections = {
