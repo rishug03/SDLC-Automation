@@ -8,9 +8,18 @@ from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from io import BytesIO
 import groq
 
-from brd import extract_text_from_docx,extract_text_from_pdf,generate_section_questions,save_questionnaire_to_excel,generate_brd_section,save_brd_to_word
+from brd import (extract_text_from_docx,extract_text_from_pdf,generate_section_questions,save_questionnaire_to_excel,generate_brd_section,save_brd_to_word)
 
 client = groq.Client(api_key="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")
+
+brd_sections = {
+    "Executive Summary": "Act as a strategic business consultant...",
+    "Business Objectives": "Act as a business user...",
+    "Scope": "Act as a project manager of an implementation partner...",
+    "Technical Data Flow": "Act as a software architect...",
+    "Data Sources": "Act as a data engineer...",
+    "Business Rules": "Act as a domain expert...",
+}
 # === Streamlit UI ===
 st.set_page_config(page_title="BRD Generator", layout="wide")
 tabs = st.sidebar.radio("TABS", ["BRD Generation", "Design", "Testing", "Analysis"])
