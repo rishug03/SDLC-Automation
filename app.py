@@ -23,7 +23,8 @@ brd_sections = {
 
 # === Streamlit UI ===
 st.set_page_config(page_title="BRD Generator", layout="wide")
-tabs = st.sidebar.radio("TABS", ["BRD Generation", "Design", "Testing", "Analysis"])
+st.sidebar.title("SDLC AUTOMATION")
+tabs = st.sidebar.radio("Select Phase", ["BRD Generation", "Design", "Testing", "Analysis"])
 st.sidebar.info("Developed by GenAI GETs 🚀")
  
 if tabs == "BRD Generation":
