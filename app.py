@@ -145,6 +145,13 @@ Please revise the section accordingly. Integrate any new insights, merge related
             st.button("Finalize BRD")
 
 if tabs == "Design":
-    st.title("📄 Design Documenet Generator")
+    st.title("📄 Design Document Generator")
+
+
+if tabs = "Testing":
+    st.title("📄 Testing Document Generator")
+
+if tabs = "Analysis":
+    st.title("📄 Analysis Document Generator")
     
  
