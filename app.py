@@ -153,7 +153,15 @@ if tabs == "Design":
     metadata_file = st.file_uploader("Upload Metadata File (PDF)", type=["pdf"])
     if add_info_file and metadata_file:
         st.success("Files uploaded successfully! Generating design documents...")
-        st.download_button("Download Design Document", data="Generated Design Document", file_name="design.xlsx")    
+        add_info_text = extract_text_from_pdf(add_info_file)
+        metadata_text = extract_text_from_pdf(metadata_file)
+        design_content = generate_design_content(add_info_text, metadata_text)
+        kpi_content = generate_kpi_content(add_info_text, metadata_text)
+        technical_content = generate_technical_content(add_info_text, metadata_text)
+        design_pdf = create_pdf(design_content, kpi_content, technical_content)
+        # Allow user to download the generated design document
+        st.download_button("Download Design Document", data=design_pdf, file_name="Design_Document.pdf", mime="application/pdf")
+       
 
 
 if tabs == "Testing":
