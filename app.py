@@ -7,7 +7,10 @@ from brd import (
     generate_section_questions, save_questionnaire_to_excel,
     generate_brd_section, save_brd_to_word
 )
-
+from design import (
+    extract_text_from_pdf,generate_design_content,generate_kpi_content,generate_technical_content,
+    create_pdf
+)
 # === Initialize Groq client ===
 client = groq.Client(api_key="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")
 
@@ -146,6 +149,11 @@ Please revise the section accordingly. Integrate any new insights, merge related
 
 if tabs == "Design":
     st.title("📄 Design Document Generator")
+        add_info_file = st.file_uploader("Upload Additional Info (PDF)", type=["pdf"])
+        metadata_file = st.file_uploader("Upload Metadata File (PDF)", type=["pdf"])
+        if add_info_file and metadata_file:
+            st.success("Files uploaded successfully! Generating design documents...")
+            st.download_button("Download Design Document", data="Generated Design Document", file_name="design.xlsx")
 
 
 if tabs == "Testing":
