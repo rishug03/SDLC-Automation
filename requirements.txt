@@ -7,4 +7,3 @@ groq
 pypdf2
 PdfReader
 reportlab.lib.pagesizes
-A4
