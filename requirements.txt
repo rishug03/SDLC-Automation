@@ -6,4 +6,4 @@ openpyxl
 groq
 pypdf2
 PdfReader
-reportlab.lib.pagesizes
+reportlab
