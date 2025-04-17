@@ -149,11 +149,11 @@ Please revise the section accordingly. Integrate any new insights, merge related
 
 if tabs == "Design":
     st.title("📄 Design Document Generator")
-        add_info_file = st.file_uploader("Upload Additional Info (PDF)", type=["pdf"])
-        metadata_file = st.file_uploader("Upload Metadata File (PDF)", type=["pdf"])
-        if add_info_file and metadata_file:
-            st.success("Files uploaded successfully! Generating design documents...")
-            st.download_button("Download Design Document", data="Generated Design Document", file_name="design.xlsx")
+    add_info_file = st.file_uploader("Upload Additional Info (PDF)", type=["pdf"])
+    metadata_file = st.file_uploader("Upload Metadata File (PDF)", type=["pdf"])
+    if add_info_file and metadata_file:
+        st.success("Files uploaded successfully! Generating design documents...")
+        st.download_button("Download Design Document", data="Generated Design Document", file_name="design.xlsx")    
 
 
 if tabs == "Testing":
