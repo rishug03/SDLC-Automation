@@ -7,3 +7,4 @@ groq
 pypdf2
 PdfReader
 reportlab
+xlsxwriter
